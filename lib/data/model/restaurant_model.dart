@@ -1,5 +1,3 @@
-
-
 class Restaurant {
   String id;
   String name;

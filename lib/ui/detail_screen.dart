@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:restaurant_app/provider/restaurant_detail_provider.dart';
@@ -19,8 +20,8 @@ class RestaurantDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<RestaurantDetailProvider>(
-      create: (_) =>
-          RestaurantDetailProvider(apiService: ApiService(), id: restaurant.id),
+      create: (_) => RestaurantDetailProvider(
+          apiService: ApiService(http.Client()), id: restaurant.id),
       child: _buildContext(context),
     );
   }

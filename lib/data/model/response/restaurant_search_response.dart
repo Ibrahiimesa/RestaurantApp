@@ -20,8 +20,8 @@ class RestaurantSearchResponse {
       );
 
   Map<String, dynamic> toJson() => {
-    "error": error,
-    "founded": founded,
-    "restaurants": List<dynamic>.from(restaurants.map((x) => x)),
-  };
+        "error": error,
+        "founded": founded,
+        "restaurants": List<dynamic>.from(restaurants.map((x) => x)),
+      };
 }
